@@ -5,8 +5,12 @@
   - Output: 9
 */
 
-function findLargestElement(numbers) {
-    
+function findLargestElement(arr) {
+    if (arr.length === 0) return undefined; // Handle empty array case
+    return Math.max(...arr);
 }
 
-module.exports = findLargestElement;
+// Example usage:
+console.log(findLargestElement([3, 7, 2, 9, 1])); // Output: 9
+console.log(findLargestElement([-5, -1, -10, -3])); // Output: -1
+console.log(findLargestElement([])); // Output: undefined
